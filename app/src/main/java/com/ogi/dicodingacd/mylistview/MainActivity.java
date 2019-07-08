@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
         planet = new Planet();
         planet.setNamePlanet("Bumi");
-        planet.setDeskripsiPlanet("Bumi merupakan planet ketiga dari sistem tata surya, merupakan planet dimana kita sebagai manusia tinggal");
+        planet.setDeskripsiPlanet("Bumi adalah planet ketiga dari Matahari yang merupakan planet terpadat dan terbesar kelima dari delapan planet dalam Tata Surya. Bumi juga merupakan planet terbesar dari empat planet kebumian Tata Surya. Bumi terkadang disebut dengan dunia atau Planet Biru.[23]\n" +
+                "\n" +
+                "Bumi terbentuk sekitar 4,54 miliar tahun yang lalu, dan kehidupan sudah muncul di permukaannya paling tidak sekitar 3,5 miliar tahun yang lalu.[24] Biosfer Bumi kemudian secara perlahan mengubah atmosfer dan kondisi fisik dasar lainnya, yang memungkinkan terjadinya perkembangbiakan organisme serta pembentukan lapisan ozon, yang bersama medan magnet Bumi menghalangi radiasi surya berbahaya dan mengizinkan makhluk hidup mikroskopis untuk berkembang biak dengan aman di daratan.[25] Sifat fisik, sejarah geologi, dan orbit Bumi memungkinkan kehidupan untuk bisa terus bertahan.");
         planet.setUkuranPlanet(6.371f);
         planet.setGambarPlanet(R.drawable.bumi);
         planets.add(planet);
