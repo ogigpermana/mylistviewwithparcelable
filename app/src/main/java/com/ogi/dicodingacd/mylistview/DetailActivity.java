@@ -16,6 +16,10 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setTitle("Overview dari tiap planet");
+        }
+
         Planet detailPlanetPilihan = getIntent().getParcelableExtra(EXTRA_PLANET);
 
         if (detailPlanetPilihan != null){
@@ -31,7 +35,7 @@ public class DetailActivity extends AppCompatActivity {
             tvDeskripsiPlanet.setText("Gambaran Planet : " + detailPlanetPilihan.getDeskripsiPlanet());
 
             TextView tvUkuranPlanet = findViewById(R.id.TvUkuranPlanet);
-            tvUkuranPlanet.setText(String.valueOf("Ukuran Planet : " + detailPlanetPilihan.getUkuranPlanet() + " km"));
+            tvUkuranPlanet.setText(String.valueOf("Ukuran Planet : " + detailPlanetPilihan.getUkuranPlanet() + " ribu km"));
         }
     }
 }

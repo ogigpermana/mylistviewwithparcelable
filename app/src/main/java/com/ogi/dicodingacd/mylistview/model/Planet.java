@@ -6,9 +6,9 @@ import android.os.Parcelable;
 public class Planet implements Parcelable {
     private String namePlanet, deskripsiPlanet;
     private int gambarPlanet;
-    private int ukuranPlanet;
+    private float ukuranPlanet;
 
-    public Planet(String namePlanet, String deskripsiPlanet, int gambarPlanet, int ukuranPlanet){
+    public Planet(String namePlanet, String deskripsiPlanet, int gambarPlanet, float ukuranPlanet){
         this.namePlanet = namePlanet;
         this.deskripsiPlanet = deskripsiPlanet;
         this.gambarPlanet = gambarPlanet;
@@ -19,7 +19,7 @@ public class Planet implements Parcelable {
         namePlanet = in.readString();
         deskripsiPlanet = in.readString();
         gambarPlanet = in.readInt();
-        ukuranPlanet = in.readInt();
+        ukuranPlanet = in.readFloat();
     }
 
     public static final Creator<Planet> CREATOR = new Creator<Planet>() {
@@ -58,11 +58,11 @@ public class Planet implements Parcelable {
         this.gambarPlanet = gambarPlanet;
     }
 
-    public int getUkuranPlanet() {
+    public float getUkuranPlanet() {
         return ukuranPlanet;
     }
 
-    public void setUkuranPlanet(int ukuranPlanet) {
+    public void setUkuranPlanet(float ukuranPlanet) {
         this.ukuranPlanet = ukuranPlanet;
     }
 
@@ -78,6 +78,6 @@ public class Planet implements Parcelable {
         parcel.writeString(namePlanet);
         parcel.writeString(deskripsiPlanet);
         parcel.writeInt(gambarPlanet);
-        parcel.writeInt(ukuranPlanet);
+        parcel.writeFloat(ukuranPlanet);
     }
 }

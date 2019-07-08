@@ -8,10 +8,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ogi.dicodingacd.mylistview.MainActivity;
+
 import com.ogi.dicodingacd.mylistview.R;
 import com.ogi.dicodingacd.mylistview.model.Planet;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class PlanetAdapter extends BaseAdapter {
@@ -63,9 +64,10 @@ public class PlanetAdapter extends BaseAdapter {
         }
 
         void bind(Planet planet){
+            DecimalFormat decimalFormat = new DecimalFormat("0.##");
             tvNamaPlanet.setText(planet.getNamePlanet());
-            tvDeskripsiPlanet.setText(planet.getDeskripsiPlanet());
-            tvUkuranPlanet.setText(String.valueOf(planet.getUkuranPlanet()));
+            tvDeskripsiPlanet.setText("Overview : " + planet.getDeskripsiPlanet());
+            tvUkuranPlanet.setText(String.valueOf("Ukuran : " + decimalFormat.format(planet.getUkuranPlanet()) + " ribu km"));
             ivPlanet.setImageResource(planet.getGambarPlanet());
         }
     }
